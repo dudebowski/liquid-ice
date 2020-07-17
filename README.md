@@ -1,4 +1,4 @@
-
+![CircleCI](https://circleci.com/gh/dudebowski/liquid-ice.svg?style=svg)](https://circleci.com/gh/dudebowski/liquid-ice)
 # liquid-ice
 Unfreezing zOS - Devops with zowe and circleCI
 
