@@ -24,8 +24,8 @@ zowe zos-files upload dir-to-pds "./CBL" "<MainframeID>.CBL"
  ```
 ### Compile and run 
 ```console
-zowe jobs submit ds "z82101.jcl(compunfr)" -d . --rfj     
-zowe jobs submit ds "z82101.jcl(execunfr)" -d . --rfj     
+zowe jobs submit ds "<MainframeID>.jcl(compunfr)" -d . --rfj     
+zowe jobs submit ds "<MainframeID>.jcl(execunfr)" -d . --rfj     
 ```
 
 ## Script
