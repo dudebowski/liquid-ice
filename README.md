@@ -27,9 +27,13 @@ zowe jobs submit ds "z82101.jcl(execunfr)" -d . --rfj
 ```
 
 ## Script
-Added npm package. Run all commands like 
+You can run all in one command using npm
 
 ```console
 npm run build --mainframeID=<MainframeID>
 ```
+
+## circleCI
+circleCI runs after each push. Job runs in a node docker.
+The config checks out the code installs zowe-cli, creats a zowe profile and runs the compilation on the mainframe
 

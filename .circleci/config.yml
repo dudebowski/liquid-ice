@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.0.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: "Check Versions"
+          command: |
+            node -v 
+            npm -v
+      - run:
+          name: "Install zowe"
+          command: |
+            sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
+      - run:
+          name: "Install Packages"
+          command: |
+            npm i .
+      - run:
+          name: "Create Zowe Profiles"
+          command: |
+            zowe -V
+            zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
+      - run:
+          name: "Build and Test"
+          command: |
+            npm run build --mainframeID=$user
