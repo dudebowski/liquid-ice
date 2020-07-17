@@ -13,13 +13,23 @@ Also advised
 ## Setup
 Set up a zowe profile with the CLI or with the Zowe explorer 
 
-## Copy files to maiframe
+## Manual runs
+
+### Copy files to maiframe
 ```console
 zowe zos-files upload dir-to-pds "./JCL" "<MainframeID>.JCL"  
 zowe zos-files upload dir-to-pds "./CBL" "<MainframeID>.CBL"
  ```
-## Compile and run 
+### Compile and run 
 ```console
 zowe jobs submit ds "z82101.jcl(compunfr)" -d . --rfj     
 zowe jobs submit ds "z82101.jcl(execunfr)" -d . --rfj     
 ```
+
+## Script
+Added npm package. Run all commands like 
+
+```console
+npm run build --mainframeID=<MainframeID>
+```
+

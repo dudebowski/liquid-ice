@@ -1,0 +1,26 @@
+{
+  "name": "liquid-ice",
+  "version": "0.0.1",
+  "description": "scripts for CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "compile": "zowe jobs submit ds \"z82101.jcl(compunfr)\" -d . --rfj ",
+    "uploadCBL": "zowe zos-files upload dir-to-pds \"./CBL\" \"$npm_config_mainframeID.CBL\"",
+    "uploadJCL": "zowe zos-files upload dir-to-pds \"./JCL\" \"$npm_config_mainframeID.JCL\"",
+    "build": "npm run uploadCBL --mainframeID=$npm_config_mainframeID && npm run uploadJCL --mainframeID=$npm_config_mainframeID && npm run compile --mainframeID=$npm_config_mainframeID"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudebowski/liquid-ice.git"
+  },
+  "keywords": [
+    "zowe",
+    "zOs"
+  ],
+  "author": "dudebowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dudebowski/liquid-ice/issues"
+  },
+  "homepage": "https://github.com/dudebowski/liquid-ice#readme"
+}
