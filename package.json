@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/dudebowski/liquid-ice/issues"
   },
-  "homepage": "https://github.com/dudebowski/liquid-ice#readme"
+  "homepage": "https://github.com/dudebowski/liquid-ice#readme",
+  "dependencies": {
+    "@zowe/cli": "^6.18.0"
+  }
 }
