@@ -6,7 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-      - run:
           name: "Install zoweCLI"
           command: sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
       - run:
