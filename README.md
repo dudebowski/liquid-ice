@@ -37,5 +37,4 @@ npm run build --mainframeID=<MainframeID>
 
 ## circleCI
 circleCI runs after each push. Job runs in a node docker.
-The config checks out the code installs zowe-cli, creats a zowe profile and runs the compilation on the mainframe
-
+The config checks out the code, installs zowe-cli, creats a zowe profile and runs the compilation on the mainframe
