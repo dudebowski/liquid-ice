@@ -4,7 +4,7 @@
   "description": "scripts for CI/CD",
   "main": "index.js",
   "scripts": {
-    "compile": "zowe jobs submit ds \"z82101.jcl(compunfr)\" -d . --rfj ",
+    "compile": "zowe jobs submit ds \"$npm_config_mainframeID.jcl(compunfr)\" -d . --rfj ",
     "uploadCBL": "zowe zos-files upload dir-to-pds \"./CBL\" \"$npm_config_mainframeID.CBL\"",
     "uploadJCL": "zowe zos-files upload dir-to-pds \"./JCL\" \"$npm_config_mainframeID.JCL\"",
     "build": "npm run uploadCBL --mainframeID=$npm_config_mainframeID && npm run uploadJCL --mainframeID=$npm_config_mainframeID && npm run compile --mainframeID=$npm_config_mainframeID"
@@ -22,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/dudebowski/liquid-ice/issues"
   },
-  "homepage": "https://github.com/dudebowski/liquid-ice#readme",
-  "dependencies": {
-    "@zowe/cli": "^6.18.0"
-  }
+  "homepage": "https://github.com/dudebowski/liquid-ice#readme"
 }
